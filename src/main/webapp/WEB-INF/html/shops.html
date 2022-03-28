@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>Hello!</div>
+<table>
+    <thead>
+    <tr>
+        <th>ABC</th>
+        <th>E-shop</th>
+        <th>Regal</th>
+        <th>Zone</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${shops.empty}">
+        <td colspan="2">Something went wrong!</td>
+    </tr>
+    <tr th:each="shop : ${shops}">
+        <td><span th:text="${shop.abbreviation}"> ABC </span></td>
+        <td><span th:text="${shop.name}"> E-shop </span></td>
+        <td><span th:text="${shop.shelving}"> Regal </span></td>
+        <td><span th:text="${shop.zone}"> Zone </span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
